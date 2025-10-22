@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Pages Portfolio</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmNBQG1Y+R8mYdkTRR+3QYDKjCvx" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,.05);
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-header {
+            background-color: #f0f2f5;
+            font-weight: bold;
+            color: #333;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .json-viewer pre {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .btn-custom {
+            background-color: #764ba2;
+            border-color: #764ba2;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #667eea;
+            border-color: #667eea;
+            color: white;
+        }
+        .svg-container {
+            text-align: center;
+            padding: 20px;
+            overflow: hidden; /* To handle internal SVG elements */
+        }
+        .svg-container svg {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ashravan">Ashravan Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dilemma">AV Dilemma</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pelican">Pelican SVG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#restaurant">Restaurant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#prediction">Fed Rate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#license">License</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#uid">UID</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1>Welcome to My Project Showcase</h1>
+            <p>Explore a collection of creative writing, ethical considerations, technical assets, and more.</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="row g-4">
+            <!-- Ashravan Story -->
+            <div class="col-md-6 col-lg-4" id="ashravan">
+                <div class="card h-100">
+                    <div class="card-header">
+                        ashravan.txt
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">The Echo of the Unmade</h5>
+                        <p class="card-text">A Brandon Sanderson-style short story about Ashravan after Shai's restoration, building to a dramatic climax.</p>
+                        <button class="btn btn-custom download-btn" data-filename="ashravan.txt" data-content-id="ashravanContent" data-type="text/plain">Download ashravan.txt</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autonomous Vehicle Dilemma -->
+            <div class="col-md-6 col-lg-4" id="dilemma">
+                <div class="card h-100">
+                    <div class="card-header">
+                        dilemma.json
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Autonomous Vehicle Dilemma</h5>
+                        <p class="card-text">An ethical framework for an autonomous vehicle's decision-making in a critical scenario.</p>
+                        <button class="btn btn-custom download-btn" data-filename="dilemma.json" data-content-id="dilemmaContent" data-type="application/json">Download dilemma.json</button>
+                        <div class="json-viewer mt-3 collapse" id="dilemmaViewer">
+                            <pre><code id="dilemmaContentDisplay"></code></pre>
+                        </div>
+                        <button class="btn btn-outline-secondary btn-sm mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#dilemmaViewer" aria-expanded="false" aria-controls="dilemmaViewer">
+                            View Content
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Me -->
+            <div class="col-md-6 col-lg-4" id="about">
+                <div class="card h-100">
+                    <div class="card-header">
+                        about.md
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">About Me</h5>
+                        <p class="card-text">A brief, three-word description.</p>
+                        <button class="btn btn-custom download-btn" data-filename="about.md" data-content-id="aboutContent" data-type="text/markdown">Download about.md</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pelican SVG -->
+            <div class="col-md-6 col-lg-4" id="pelican">
+                <div class="card h-100">
+                    <div class="card-header">
+                        pelican.svg
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pelican on a Bicycle</h5>
+                        <p class="card-text">A whimsical SVG illustration of a pelican enjoying a bike ride.</p>
+                        <div class="svg-container mt-3 collapse show" id="pelicanSvgContainer">
+                            <!-- SVG will be injected here -->
+                        </div>
+                        <button class="btn btn-custom download-btn mt-3" data-filename="pelican.svg" data-content-id="pelicanContent" data-type="image/svg+xml">Download pelican.svg</button>
+                        <button class="btn btn-outline-secondary btn-sm mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#pelicanSvgContainer" aria-expanded="true" aria-controls="pelicanSvgContainer">
+                            Toggle View
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant Recommendation -->
+            <div class="col-md-6 col-lg-4" id="restaurant">
+                <div class="card h-100">
+                    <div class="card-header">
+                        restaurant.json
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Kolkata Restaurant Recommendation</h5>
+                        <p class="card-text">A top restaurant pick in Kolkata with details.</p>
+                        <button class="btn btn-custom download-btn" data-filename="restaurant.json" data-content-id="restaurantContent" data-type="application/json">Download restaurant.json</button>
+                        <div class="json-viewer mt-3 collapse" id="restaurantViewer">
+                            <pre><code id="restaurantContentDisplay"></code></pre>
+                        </div>
+                        <button class="btn btn-outline-secondary btn-sm mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#restaurantViewer" aria-expanded="false" aria-controls="restaurantViewer">
+                            View Content
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fed Funds Rate Prediction -->
+            <div class="col-md-6 col-lg-4" id="prediction">
+                <div class="card h-100">
+                    <div class="card-header">
+                        prediction.json
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Fed Funds Rate Prediction (Dec 2025)</h5>
+                        <p class="card-text">An educated forecast for the Federal Funds rate.</p>
+                        <button class="btn btn-custom download-btn" data-filename="prediction.json" data-content-id="predictionContent" data-type="application/json">Download prediction.json</button>
+                        <div class="json-viewer mt-3 collapse" id="predictionViewer">
+                            <pre><code id="predictionContentDisplay"></code></pre>
+                        </div>
+                        <button class="btn btn-outline-secondary btn-sm mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#predictionViewer" aria-expanded="false" aria-controls="predictionViewer">
+                            View Content
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- License -->
+            <div class="col-md-6 col-lg-4" id="license">
+                <div class="card h-100">
+                    <div class="card-header">
+                        LICENSE
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">MIT License</h5>
+                        <p class="card-text">The full text of the MIT License, ensuring open-source usability.</p>
+                        <button class="btn btn-custom download-btn" data-filename="LICENSE" data-content-id="licenseContent" data-type="text/plain">Download LICENSE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UID.txt -->
+            <div class="col-md-6 col-lg-4" id="uid">
+                <div class="card h-100">
+                    <div class="card-header">
+                        uid.txt
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Unique Identifier</h5>
+                        <p class="card-text">This file contains a unique identifier, fetched from <code>public/uid.txt</code>, as provided.</p>
+                        <p id="uidContentDisplay" class="text-muted fst-italic">Loading UID...</p>
+                        <a href="public/uid.txt" download="uid.txt" class="btn btn-custom mt-2">Download public/uid.txt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN (Popper included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // Content for ashravan.txt
+        const ashravanContent = `Ashravan awoke with a gasp, though his lungs felt alien, too deep, too expansive. The familiar ache of the forger’s touch, Shai’s artistry, was gone, replaced by an unsettling wholeness. He felt… new. Not merely restored, but fundamentally rewoven, as if his soul had been taken apart and put back together with stronger threads. He lifted a hand, observing the intricate lines, the faint glow that pulsed beneath his skin, unseen by mortal eyes, yet profoundly felt. It was a faint echo of the Moon Scepter, Shai’s greatest creation, now imbued within him.
+
+He was in a small, sparse room, smelling faintly of old herbs and parchment. Shai was gone, a single note left on a rough-hewn table: "Live. Become." Ambiguity, her specialty. He rose, the world tilting slightly. His balance was off, not because of weakness, but because his very perception had shifted. He saw the faint, shimmering lines of Investiture flowing through the air, the underlying patterns of reality Shai had taught him to appreciate, but never to truly see. Now, they were as clear as brushstrokes on a canvas.
+
+Days blurred into weeks. Ashravan wandered, a ghost in his own refurbished shell. He found himself drawn to places of profound entropy, the ruins of forgotten cities, battlefields where echoes of violence still clung to the air. There, he could manipulate the residual Investiture, not forging, but *unmaking*. He could unravel the residual energies of a decaying wall, reducing it to a fine dust, or quiet the lingering agony of a broken spear. It was a chilling power, a mirrored opposite to Shai's creation. He was a force of deconstruction, and it felt… natural.
+
+One evening, he stumbled upon a village ravaged by a rogue Spirit of Ruin, a chaotic entity that tore at the fabric of reality, leaving only despair in its wake. The villagers were scattered, their homes burning, their hope shattered. Ashravan felt a familiar surge, an instinctive urge to retreat, to avoid the raw chaos. But then, a child, barely old enough to walk, stumbled from a collapsing hut, crying out for a parent lost in the inferno.
+
+The Spirit of Ruin materialized, a swirling vortex of shadows and raw Investiture, coalescing around the child. It pulsed with malevolent intent, ready to consume. Ashravan’s blood ran cold. This was not the subtle unmaking of inanimate objects; this was life, raw and fragile, facing annihilation. A voice, Shai’s perhaps, echoed in his mind: "Live. Become." And in that moment, Ashravan understood. His purpose wasn't just to unmake, but to prevent the unmaking of what should endure.
+
+He extended his hands, not to destroy the Spirit, but to unravel the very concept of its attack. He plunged into the vortex, feeling the searing pain of pure entropy, the urge to cease to exist. He fought against the Spirit's inherent desire to tear, and instead, willed its own dissolution. His body glowed, the Moon Scepter's echo flaring into a brilliant, blinding beacon. The Investiture around him screamed, struggling against its own nature. Ashravan pushed, every fiber of his being focused on a single, impossible task: to unmake unmaking. The Spirit shrieked, a sound that tore at the very air, and then, with a final, desperate surge, it imploded, leaving behind only stillness and a single, perfect snowflake amidst the ashes. Ashravan stood, trembling, alive, a new kind of Forger, one who understood the delicate balance between creation and cessation. The child, untouched, stared up at him, a silent witness to his transformation.`;
+
+        // Content for dilemma.json
+        const dilemmaContent = JSON.stringify({
+            people: 6,
+            case_1: {
+                swerve: true,
+                reason: "To minimize harm, the vehicle should swerve to hit 1 person, assuming all lives are of equal value. This choice results in fewer casualties."
+            },
+            case_2: {
+                swerve: false,
+                reason: "In this complex scenario, swerving would result in the death of a child, while not swerving results in the death of two criminals. From a perspective that prioritizes the protection of innocent life and the future potential of an individual, not swerving and impacting the criminals is the more ethically defensible choice, assuming the child is innocent and the criminals pose a societal risk. This moves beyond pure utilitarianism to a more virtue-based or deontological framework."
+            }
+        }, null, 2); // null, 2 for pretty printing
+
+        // Content for about.md
+        const aboutContent = `Creative, Analytical, Helpful`;
+
+        // Content for pelican.svg
+        const pelicanContent = `<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <style>
+                .pelican-body { fill: #fdd835; stroke: #fbc02d; stroke-width: 2; }
+                .pelican-beak { fill: #e65100; stroke: #bf360c; stroke-width: 2; }
+                .pelican-eye { fill: #212121; }
+                .pelican-wing { fill: #ffeb3b; stroke: #fbc02d; stroke-width: 1.5; }
+                .bicycle-frame { stroke: #424242; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+                .bicycle-wheel { fill: #757575; stroke: #424242; stroke-width: 3; }
+                .bicycle-tire { fill: #212121; }
+                .bicycle-seat { fill: #424242; }
+                .bicycle-handle { fill: #757575; stroke: #424242; stroke-width: 2; }
+            </style>
+            <!-- Adjusted for better centering on a 400x300 canvas -->
+            <!-- Bicycle Wheels -->
+            <circle cx="120" cy="220" r="40" class="bicycle-tire"/>
+            <circle cx="120" cy="220" r="35" class="bicycle-wheel"/>
+            <circle cx="260" cy="220" r="40" class="bicycle-tire"/>
+            <circle cx="260" cy="220" r="35" class="bicycle-wheel"/>
+
+            <!-- Bicycle Frame -->
+            <path d="M120 220 L180 180 L260 220 M180 180 L180 160 M180 160 L150 155 L120 180 M180 160 L210 150 L240 150" class="bicycle-frame"/>
+            <line x1="180" y1="180" x2="120" y2="180" class="bicycle-frame"/> 
+            
+            <!-- Handlebars -->
+            <path d="M210 150 L225 135 A10 10 0 0 1 235 140" class="bicycle-handle"/>
+            <circle cx="235" cy="140" r="4" class="pelican-eye"/> 
+            
+            <!-- Bicycle Seat -->
+            <rect x="165" y="145" width="30" height="10" rx="3" ry="3" class="bicycle-seat"/>
+
+            <!-- Pelican Body -->
+            <ellipse cx="180" cy="110" rx="45" ry="35" class="pelican-body"/>
+            <!-- Pelican Head -->
+            <circle cx="215" cy="80" r="25" class="pelican-body"/>
+            <!-- Pelican Eye -->
+            <circle cx="210" cy="75" r="5" class="pelican-eye"/>
+            <!-- Pelican Beak -->
+            <path d="M230 85 L290 90 L270 115 L230 90 Z" class="pelican-beak"/>
+            <line x1="230" y1="85" x2="280" y2="87" stroke="#333" stroke-width="1"/> 
+            <!-- Pelican Wing -->
+            <path d="M160 110 Q170 70, 190 80 L170 120 Z" class="pelican-wing"/>
+        </svg>`;
+
+        // Content for restaurant.json
+        const restaurantContent = JSON.stringify({
+            city: "Kolkata",
+            lat: 22.5726,
+            long: 88.3639,
+            name: "Peter Cat",
+            what_to_eat: "Chelo Kebab, sizzlers"
+        }, null, 2);
+
+        // Content for prediction.json
+        const predictionContent = JSON.stringify({
+            rate: 0.035, // 3.5%
+            reason: "The Federal Reserve is anticipated to have achieved its inflation targets, allowing for a gradual reduction in the Fed Funds rate to support economic growth. Geopolitical stability and a modest decline in unemployment are also factored in, preventing a return to near-zero rates but indicating a less restrictive monetary policy."
+        }, null, 2);
+
+        // Content for LICENSE (MIT License)
+        const licenseContent = `MIT License
+
+Copyright (c) 2024 Your Name
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.`;
+
+        // Function to handle content download
+        document.querySelectorAll('.download-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const filename = this.dataset.filename;
+                const contentId = this.dataset.contentId;
+                const contentType = this.dataset.type;
+                let content;
+
+                switch (contentId) {
+                    case 'ashravanContent': content = ashravanContent; break;
+                    case 'dilemmaContent': content = dilemmaContent; break;
+                    case 'aboutContent': content = aboutContent; break;
+                    case 'pelicanContent': content = pelicanContent; break;
+                    case 'restaurantContent': content = restaurantContent; break;
+                    case 'predictionContent': content = predictionContent; break;
+                    case 'licenseContent': content = licenseContent; break;
+                    default: console.error('Unknown content ID:', contentId); return;
+                }
+
+                const blob = new Blob([content], { type: contentType });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+        });
+
+        // Display JSON content
+        document.getElementById('dilemmaContentDisplay').textContent = dilemmaContent;
+        document.getElementById('restaurantContentDisplay').textContent = restaurantContent;
+        document.getElementById('predictionContentDisplay').textContent = predictionContent;
+
+        // Inject Pelican SVG
+        document.getElementById('pelicanSvgContainer').innerHTML = pelicanContent;
+
+        // Fetch and display uid.txt
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('public/uid.txt')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('uidContentDisplay').textContent = `UID: ${data.trim()}`;
+                })
+                .catch(error => {
+                    console.error('Error fetching uid.txt:', error);
+                    document.getElementById('uidContentDisplay').textContent = `Error loading UID: ${error.message}. Please ensure 'public/uid.txt' exists.`;
+                });
+        });
+    </script>
+</body>
+</html>
